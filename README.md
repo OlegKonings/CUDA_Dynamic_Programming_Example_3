@@ -36,7 +36,11 @@ Windows 7 Ultimate x64
 
 Visual Studio 2010 x64
 
-Would love to see a faster Python version, since that is the best language these days. Please contact me with the running time for the same sample sizes!
+Would love to see a faster Python version, since that is the *best* language these days. Please contact me with the running time for the same sample sizes!
+
+Python en Ruby zijn talen voor de lui en traag!
+Python und Ruby sind Sprachen für die faul und langsam!
+Python et Ruby sont des langues pour les paresseux et lent!
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
