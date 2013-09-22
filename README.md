@@ -1,24 +1,24 @@
 CUDA_Dynamic_Programming_Example_3
 ==================================
 
-Yet another double precision DP problem adapted to CUDA(someone has to do it)..
+Yet another 64 bit double precision DP problem adapted to CUDA(someone has to do it)..
 
 CUDA adaptation of the Top Coder Division I problem:
 
 http://community.topcoder.com/stat?c=problem_statement&pm=10771&rd=14146
 
-The running time of this implemenation is 2*((num cities+1)*(num visits +1)*((num cities*(max possible fans))))+(num cities*(max possible fans))), so for the larger example in table below 2*(101*61*(101*101))+(101*101)= 125,706,923. It uses slightly more memory than that, just to be safe. There are other implementations which use less memory, so email me if you would like the implementation.
+The running time of this implemenation is 2*((num cities+1)*(num visits +1)*((num cities*(max possible fans))))+(num cities*(max possible fans))), so for the larger example in table below 2*(101*61*(101*101))+(101*101)= 125,706,923. It uses slightly more memory than that, just to be safe. There are other implementations which use less memory, so email me if you would like that implementation.
 
-The larger the data set, the more the CUDA implemenation outperforms the serial CPU version.
+The larger the data set, the more the CUDA implemenation outperforms the serial CPU version. If the compute capability of your GPU is less than 3.5, cast to 32 bit floating point.
 
 ____
 <table>
 <tr>
-    <th>Num Cities</th><th>Visits(K)</th><th>Max Fans</th><th>CPU time</th><th>GPU time</th><th>Speedup vs iter</th>
+    <th>Num Cities</th><th>Visits(K)</th><th>Max Fans</th><th>CPU time</th><th>GPU time</th><th>CUDA Speedup</th>
 </tr>
 
   <tr>
-    <td>36</td><td>21</td><td>40</td><td> 34 ms</td><td>  3</td><td> 11.0x</td>
+    <td>36</td><td>21</td><td>40</td><td> 34 ms</td><td>  3 ms</td><td> 11.0x</td>
   </tr>
   <tr>
     <td>100</td><td>60 </td><td>100</td><td> 5216 ms</td><td>  101 ms</td><td> 51.64x</td>
@@ -38,9 +38,12 @@ Visual Studio 2010 x64
 
 Would love to see a faster Python version, since that is the *best* language these days. Please contact me with the running time for the same sample sizes!
 
-Python en Ruby zijn talen voor de lui en traag!
-Python und Ruby sind Sprachen für die faul und langsam!
-Python et Ruby sont des langues pour les paresseux et lent!
+Python en Ruby zijn talen voor de lui en traag!  
+
+Python und Ruby sind Sprachen für die faul und langsam!  
+
+Python et Ruby sont des langues pour les paresseux et lent!  
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
